@@ -16,6 +16,8 @@ class _TopSectionWidgetState extends State<TopSectionWidget> {
   late bool canSee = widget.eyeOpened;
   @override
   Widget build(BuildContext context) {
+    /*Container that
+    has all the widgets */
     return Container(
       height: 130,
       decoration: BoxDecoration(
@@ -30,6 +32,10 @@ class _TopSectionWidgetState extends State<TopSectionWidget> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                /*
+                  Badge that goes to the top-right
+                  part of the container
+                 */
                 Badge(
                   padding: EdgeInsets.all(20),
                   backgroundColor: Colors.white,
@@ -39,6 +45,9 @@ class _TopSectionWidgetState extends State<TopSectionWidget> {
                     decoration: BoxDecoration(
                         color: Color(0xFF9436E2),
                         borderRadius: BorderRadius.circular(22)),
+                    /*
+                          Icon inside container to add a certain image idk
+                         */
                     child: Icon(
                       Icons.image_outlined,
                       color: Colors.white,
@@ -48,6 +57,9 @@ class _TopSectionWidgetState extends State<TopSectionWidget> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    /*
+                      Gesture detector to change info behaviours
+                     */
                     GestureDetector(
                         onTap: () {
                           setState(() {
@@ -81,6 +93,9 @@ class _TopSectionWidgetState extends State<TopSectionWidget> {
                 )
               ],
             ),
+            /*
+            Padding to fix text position
+             */
             Padding(
               padding: const EdgeInsets.only(left: 5, bottom: 5),
               child: Text(

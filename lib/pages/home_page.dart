@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/widgets/main_content_widget.dart';
 import '../colors/palette.dart';
 import '../widgets/top_bar_widget.dart';
 
@@ -24,7 +25,9 @@ class _HomePageState extends State<HomePage> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                //Top bar widget
                 TopSectionWidget(eyeOpened: canSee),
+                MainContentWidget(),
               ],
             ),
           ),
