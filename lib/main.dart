@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter NuBank app clone',
       theme: ThemeData(
+        fontFamily: 'Graphik',
         scaffoldBackgroundColor: Palette.background,
       ),
       home: HomePage(),

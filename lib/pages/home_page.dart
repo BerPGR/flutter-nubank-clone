@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cupertino_icons/cupertino_icons.dart';
 import '../colors/palette.dart';
 
 class HomePage extends StatefulWidget {
@@ -40,6 +38,7 @@ class _HomePageState extends State<HomePage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Badge(
+                              padding: EdgeInsets.all(20),
                               backgroundColor: Colors.white,
                               child: Container(
                                 width: 45,
