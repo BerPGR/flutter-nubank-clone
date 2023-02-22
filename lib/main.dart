@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
+import 'colors/palette.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter NuBank app clone',
-      theme: ThemeData(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Palette.background,
+      ),
       home: HomePage(),
     );
   }
