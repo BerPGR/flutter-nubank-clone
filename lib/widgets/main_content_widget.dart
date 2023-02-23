@@ -1,5 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/model/carousel_items.dart';
+import 'package:nubank_clone/widgets/sub-widget/carousel_items_widget.dart';
 
 class MainContentWidget extends StatefulWidget {
   final bool canSee;
@@ -45,14 +47,23 @@ class _MainContentWidgetState extends State<MainContentWidget> {
           SizedBox(
             height: 10,
           ),
+          //Accounts balance
           Text(
             eyeOpen == true ? 'R\$1.000,00' : '⚫⚫⚫⚫',
             style: eyeOpen == true
                 ? TextStyle(fontWeight: FontWeight.bold, fontSize: 20)
                 : TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
-          )
+          ),
+          SizedBox(
+            height: 15,
+          ),
 
-          //Accounts balance
+          // ListView containing all the carousel items
+          SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [for (final item in items) CarouselItem(item: item)],
+              )),
         ],
       ),
     );
