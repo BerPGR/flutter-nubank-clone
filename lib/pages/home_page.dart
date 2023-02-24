@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/widgets/credit_card_bill_widget.dart';
 import 'package:nubank_clone/widgets/main_content_widget.dart';
 import '../colors/palette.dart';
 import '../widgets/top_bar_widget.dart';
@@ -31,7 +32,14 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: 1,
                 ),
-                Divider(thickness: 1),
+                Divider(thickness: 2),
+                CreditCardWidget(
+                  eyeOpen: canSee,
+                ),
+                SizedBox(
+                  height: 1,
+                ),
+                Divider(thickness: 2),
               ],
             ),
           ),

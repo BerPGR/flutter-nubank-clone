@@ -22,7 +22,7 @@ class _MainContentWidgetState extends State<MainContentWidget> {
   Widget build(BuildContext context) {
     bool eyeOpen = widget.canSee;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
+      padding: const EdgeInsets.fromLTRB(25, 30, 25, 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         /*
@@ -55,7 +55,11 @@ class _MainContentWidgetState extends State<MainContentWidget> {
             eyeOpen == true ? 'R\$1.000,00' : '⚫⚫⚫⚫',
             style: eyeOpen == true
                 ? TextStyle(fontWeight: FontWeight.w500, fontSize: 20)
-                : TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                : TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 8,
+                    letterSpacing: 2,
+                    color: Colors.black),
           ),
           SizedBox(
             height: 30,
@@ -85,10 +89,10 @@ class _MainContentWidgetState extends State<MainContentWidget> {
                       'Ative o Modo Rua e proteja mais a sua conta.'),
               SuggestionsCarouselSubWidget(
                   containerText:
-                      'Concorra a premios com o Nubank Vida a partir de R\$4/...'),
+                      'Concorra a prêmios com o Nubank Vida a partir de R\$4/...'),
               SuggestionsCarouselSubWidget(
                   containerText:
-                      'Convide amigos para o Nubank e desbloquiei brasoes incriveis.'),
+                      'Convide amigos para o Nubank e desbloquiei brasões incríveis.'),
             ]),
           )
         ],
