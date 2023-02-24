@@ -38,7 +38,7 @@ class CarouselItem extends StatelessWidget {
           Text(
             '${item.type}',
             style: TextStyle(
-                overflow: TextOverflow.ellipsis, fontWeight: FontWeight.bold),
+                overflow: TextOverflow.ellipsis, fontWeight: FontWeight.w600),
           ),
         ],
       ),

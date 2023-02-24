@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/colors/palette.dart';
 import 'package:nubank_clone/model/carousel_items.dart';
 import 'package:nubank_clone/widgets/sub-widget/carousel_items_widget.dart';
 
@@ -34,7 +35,7 @@ class _MainContentWidgetState extends State<MainContentWidget> {
                 children: [
                   Text(
                     'Conta',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
                   ),
                 ],
               ),
@@ -45,25 +46,57 @@ class _MainContentWidgetState extends State<MainContentWidget> {
             ],
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           //Accounts balance
           Text(
             eyeOpen == true ? 'R\$1.000,00' : '⚫⚫⚫⚫',
             style: eyeOpen == true
-                ? TextStyle(fontWeight: FontWeight.bold, fontSize: 20)
+                ? TextStyle(fontWeight: FontWeight.w500, fontSize: 20)
                 : TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
           ),
           SizedBox(
-            height: 15,
+            height: 30,
           ),
 
           // ListView containing all the carousel items
           SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [for (final item in items) CarouselItem(item: item)],
-              )),
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                for (final item in items) CarouselItem(item: item),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          Container(
+            padding: EdgeInsets.all(15),
+            height: 60,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+                color: Palette.nuButtons,
+                borderRadius: BorderRadius.circular(15)),
+            child: Row(
+              children: [
+                Badge(
+                  backgroundColor: Palette.nuPurple,
+                  child: Icon(
+                    Icons.credit_card_rounded,
+                    size: 25,
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Text(
+                  'Meus cartões',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
