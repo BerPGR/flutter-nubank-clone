@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:nubank_clone/colors/palette.dart';
 import 'package:nubank_clone/model/carousel_items.dart';
 import 'package:nubank_clone/widgets/sub-widget/carousel_items_widget.dart';
+import 'package:nubank_clone/widgets/sub-widget/my_cards_subwidget.dart';
 
 class MainContentWidget extends StatefulWidget {
   final bool canSee;
@@ -71,32 +72,7 @@ class _MainContentWidgetState extends State<MainContentWidget> {
           SizedBox(
             height: 25,
           ),
-          Container(
-            padding: EdgeInsets.all(15),
-            height: 60,
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                color: Palette.nuButtons,
-                borderRadius: BorderRadius.circular(15)),
-            child: Row(
-              children: [
-                Badge(
-                  backgroundColor: Palette.nuPurple,
-                  child: Icon(
-                    Icons.credit_card_rounded,
-                    size: 25,
-                  ),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Text(
-                  'Meus cartões',
-                  style: TextStyle(fontWeight: FontWeight.w500),
-                ),
-              ],
-            ),
-          ),
+          MyCardsSubWidget()
         ],
       ),
     );
