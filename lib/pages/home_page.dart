@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/widgets/acompanhe_widget.dart';
 import 'package:nubank_clone/widgets/credit_card_bill_widget.dart';
+import 'package:nubank_clone/widgets/loan_widget.dart';
 import 'package:nubank_clone/widgets/main_content_widget.dart';
+import 'package:nubank_clone/widgets/more_widget.dart';
 import '../colors/palette.dart';
 import '../widgets/top_bar_widget.dart';
 
@@ -40,6 +43,11 @@ class _HomePageState extends State<HomePage> {
                   height: 1,
                 ),
                 Divider(thickness: 2),
+                AcompanheWidget(),
+                Divider(thickness: 2),
+                LoanWidget(),
+                Divider(thickness: 2),
+                MoreWidget(),
               ],
             ),
           ),

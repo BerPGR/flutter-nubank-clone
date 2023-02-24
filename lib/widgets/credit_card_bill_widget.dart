@@ -30,7 +30,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget> {
             children: [
               Text(
                 'Cartão de crédito',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
               ),
               Icon(
                 Icons.arrow_forward_ios,
