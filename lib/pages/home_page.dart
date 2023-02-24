@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/widgets/acompanhe_widget.dart';
 import 'package:nubank_clone/widgets/credit_card_bill_widget.dart';
@@ -15,11 +16,30 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int indice = 0;
   bool canSee = true;
+
+  void _onTabTapped(int index) {
+    setState(() {
+      indice = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Palette.nuPurple,
+        currentIndex: indice,
+        onTap: _onTabTapped,
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.compare_arrows_outlined), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.attach_money), label: ''),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.wallet_giftcard_rounded), label: ''),
+        ],
+      ),
       body: Stack(children: [
         Container(
           height: 25,
