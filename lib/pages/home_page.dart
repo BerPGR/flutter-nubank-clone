@@ -28,6 +28,10 @@ class _HomePageState extends State<HomePage> {
                 //Top bar widget
                 topSectionWidget(),
                 MainContentWidget(canSee: canSee),
+                SizedBox(
+                  height: 1,
+                ),
+                Divider(thickness: 1),
               ],
             ),
           ),

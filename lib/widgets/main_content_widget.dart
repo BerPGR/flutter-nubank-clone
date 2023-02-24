@@ -4,6 +4,7 @@ import 'package:nubank_clone/colors/palette.dart';
 import 'package:nubank_clone/model/carousel_items.dart';
 import 'package:nubank_clone/widgets/sub-widget/carousel_items_widget.dart';
 import 'package:nubank_clone/widgets/sub-widget/my_cards_subwidget.dart';
+import 'package:nubank_clone/widgets/sub-widget/sugestions_carousel_widget.dart';
 
 class MainContentWidget extends StatefulWidget {
   final bool canSee;
@@ -72,7 +73,24 @@ class _MainContentWidgetState extends State<MainContentWidget> {
           SizedBox(
             height: 25,
           ),
-          MyCardsSubWidget()
+          MyCardsSubWidget(),
+          SizedBox(
+            height: 25,
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(children: [
+              SuggestionsCarouselSubWidget(
+                  containerText:
+                      'Ative o Modo Rua e proteja mais a sua conta.'),
+              SuggestionsCarouselSubWidget(
+                  containerText:
+                      'Concorra a premios com o Nubank Vida a partir de R\$4/...'),
+              SuggestionsCarouselSubWidget(
+                  containerText:
+                      'Convide amigos para o Nubank e desbloquiei brasoes incriveis.'),
+            ]),
+          )
         ],
       ),
     );
